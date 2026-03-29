@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Perfect World — Отметить подарки",
+  "version": "1.0",
+  "description": "Автоматически отмечает все чекбоксы на странице подарков pwonline.ru",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://pwonline.ru/promo_items.php*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
